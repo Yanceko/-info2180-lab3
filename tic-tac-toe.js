@@ -1,9 +1,19 @@
 
-var x = true;
-var status = document.getElementById("status");
-var board= document.getElementById("board");
-var boardList = gameBoard.querySelectorAll("div");
-var button = document.querySelector("button");
+
+
+window.onload=function(){
+    var x = true;
+    var status = document.getElementById("status");
+    var board= document.getElementById("board");
+    var boardList = board.querySelectorAll("div");
+    var button = document.querySelector("button");
+    /*let sq= document.getElementById('board');
+    console.log(sq);
+    console.log(sq.children);
+    console.log(sq.firstChild);*/
+    
+
+
 
 /*boardList.forEach(element => {
     element.setAttribute("class","square");
@@ -12,8 +22,9 @@ var button = document.querySelector("button");
     //Test
     console.log(boardlist.indexOf(element));*/
 
-var slot = document.getElementById('board').childNodes;
-slot.forEach(slotCell =>{
-    console.log(slotCell);
+    //var slot = document.getElementById('board').childNodes;
+    boardList.forEach(slotCell => {
     slotCell.setAttribute('class','square');
-})
+    console.log(boardList);
+});
+}
