@@ -6,20 +6,10 @@ window.onload=function(){
     var boardList = board.querySelectorAll("div");
     var currPlayer ='X'
     //var button = document.querySelector("button");
-    /*let sq= document.getElementById('board');
-    console.log(sq);
-    console.log(sq.children);
-    console.log(sq.firstChild);*/
+    
     
 
 
-
-/*boardList.forEach(element => {
-    element.setAttribute("class","square");
-    element.setAttribute("id",id);
-    id++;
-    //Test
-    console.log(boardlist.indexOf(element));*/
 
     //var slot = document.getElementById('board').childNodes;
     boardList.forEach(slotCell => {
@@ -41,6 +31,20 @@ window.onload=function(){
 
     })
 
+    slotCell.addEventListener('mouseover', function(e) {
+        e.target.classList.add('hover');
+      });
+
+    slotCell.addEventListener('mouseout', function(e) {
+        e.target.classList.remove('hover');
+      });
+      
+
+    
+
 });
+    //let boxes = document.querySelectorAll('.box');
+
+    
 
 }
