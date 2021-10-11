@@ -5,7 +5,7 @@ window.onload=function(){
     var board= document.getElementById("board");
     var boardList = board.querySelectorAll("div");
     var currPlayer ='X'
-    //var button = document.querySelector("button");
+    var button = document.querySelector("button");
     
     
 
@@ -15,7 +15,10 @@ window.onload=function(){
     boardList.forEach(slotCell => {
     slotCell.setAttribute('class','square');
     console.log(boardList);
+    playerChange();
 
+    
+function playerChange(){   
     slotCell.addEventListener("click",clicked=>{
         if (currPlayer =="O" && !slotCell.classList.contains("O") && !slotCell.classList.contains("X") ){
             slotCell.textContent="O";
@@ -30,6 +33,7 @@ window.onload=function(){
         
 
     })
+}
 
     slotCell.addEventListener('mouseover', function(e) {
         e.target.classList.add('hover');
@@ -38,6 +42,13 @@ window.onload=function(){
     slotCell.addEventListener('mouseout', function(e) {
         e.target.classList.remove('hover');
       });
+
+
+    button.addEventListener("click",clicked=>{
+        board.querySelectorAll('div').forEach(cell => cell.innerHTML = "");  
+    });
+    playerChange();
+    
       
 
     
